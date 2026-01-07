@@ -73,11 +73,19 @@
 
     function changeImage() {
 
+      if (index >= images.length - 1) {
+        clearInterval(interval);
+        return;
+      }
+
       img.style.animation = "none";
       img.offsetHeight; 
      
       setTimeout(() => {
-        index = (index + 1) % images.length;
+        index++;
+        if(index==5){
+          img.style.zIndex = "-10";
+        }
         img.src = images[index];
       }, 1500); 
 
