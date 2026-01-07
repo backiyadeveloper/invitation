@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Invitation</title>
+  <link rel="stylesheet" href="invitation.css">
+</head>
+
+<body>
+  <audio id="song" loop>
+    <source src="./mudhalkanave.mp3" type="audio/mpeg">
+  </audio>
+
+  <div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+  </div>
+  <div class="container">
+    <div class="img-container">
+      <img id="slideImg" src="./img1.jpeg" alt="image">
+    </div>
+
+    <div class="text-container">
+      <h3>Join us as we begin our new life together</h3>
+      <h1>R.Backiya lakshmi <span>&amp;</span> S.ArunKumar</h1>
+      <h3>Wedding on</h3>
+      <h2>28/01/2026</h2>
+      <h4>at</h4>
+      <h2>9 AM-10.30 AM</h2>
+      <h4>at</h4>
+      <h2>Vaijeyandhi Mahal.</h2>
+    </div>
+  </div>
+
+  <script>
+
+     document.body.addEventListener("click", () => {
+      document.getElementById("song").play();
+    }, { once: true });
+
+    const images = [
+      "img2.jpeg",
+      "img3.jpeg",
+      "img4.jpeg",
+      "img5.jpeg",
+      "img6.jpeg"
+    ];
+
+    const img = document.getElementById("slideImg");
+    let index = 0;
+
+    function changeImage() {
+
+      img.style.animation = "none";
+      img.offsetHeight; 
+     
+      setTimeout(() => {
+        index = (index + 1) % images.length;
+        img.src = images[index];
+      }, 1500); 
+
+      
+      img.style.animation = "scaleOutIn 3s ease-in-out forwards";
+    }
+
+    setInterval(changeImage, 3000);
+  </script>
+
+
+</body>
+
+</html>
