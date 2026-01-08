@@ -175,6 +175,51 @@ body {
     }
 }
 
+#startScreen {
+  position: fixed;
+  inset: 0;               
+  background-image: url("./welcomepic.jpeg"); 
+  background-size: cover;       
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  padding: 20px;
+}
+
+#startScreen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.welcome-text{
+    display: fixed;
+    z-index: 1;
+    text-align: center;
+    padding-bottom: 10px;
+    color: #fde8d5;
+    font-family: cursive;
+    letter-spacing: 2px;
+    text-shadow: none;
+}
+
+#playBtn {
+  position: relative;
+  z-index: 1;
+  font-size: 26px;
+  padding: 18px 40px;
+  border-radius: 50px;
+  border: none;
+  background: gold;
+}
+
+
 .container {
     display: flex;
     height: 100%;
@@ -229,7 +274,7 @@ body {
 }
 
 .text-container {
-    width: 50%;
+    width: 70%;
 }
 
 .text-container h1 {
